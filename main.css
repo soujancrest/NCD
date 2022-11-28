@@ -250,23 +250,23 @@ header .container {
 }
 .image-text h1{
   font-size: 1rem;
-  margin: -4rem 0 0 -2rem;
+  margin: -3rem 0 0 -2rem;
 }
 .about .side-text h1{
   font-size: 2rem;
-  margin-top: -8rem;
-  right: -22%;
+  margin-top: -9rem;
+  right: -25%;
 }
 .card-text {
   height: auto;
-  margin: 3rem 0rem 0 -3rem;
-  padding: 1rem 1rem 1rem 2rem;
+  margin: 2rem 0rem 0 -2.5rem;
+  padding: 1rem 1rem 1rem 1.5rem;
 }
 .card-text h3{
-  font-size: 0.7rem;
+  font-size: 0.9rem;
 }
 .card-text p{
-  font-size: 0.4rem;
+  font-size: 0.5rem;
   margin: auto;
 }
 #bannerOne-caption{
@@ -282,7 +282,7 @@ header .container {
   margin: 0;
 }
 .about{
-  padding: 4rem 0;
+  padding: 3rem 0;
 }
 .about .royal-tag {
   display: none;
