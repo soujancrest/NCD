@@ -217,6 +217,7 @@ header .container {
 .banner .carousel-inner img{
   width: auto !important;
   height: 40vh;
+  filter: brightness(0.8);
 }
 .banner .carousel-caption h1{
   font-size: 1.6rem;
@@ -224,6 +225,7 @@ header .container {
 #bannerOne-caption img {
   height: auto;
   width: 30% !important;
+  filter: none;
 }
 .banner .royal-tag {
   top: 44vh;
