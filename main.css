@@ -203,7 +203,7 @@ header .navbar a {
   display: none !important;
 }
 header .logo img {
-  width: 25vw;
+  width: 20vw;
 }
 header .container .logo {
   margin-bottom: auto;
@@ -216,21 +216,22 @@ header .container {
 }
 .banner .carousel-inner img{
   width: auto !important;
-  height: 35vh;
+  height: 40vh;
 }
 .banner .carousel-caption h1{
   font-size: 1.6rem;
 }
 #bannerOne-caption img {
-  height: 10vh;
+  height: auto;
+  width: 30% !important;
 }
 .banner .royal-tag {
-  top: 40vh;
+  top: 44vh;
 }
-.royal-tag{
+/* .royal-tag{
   left: auto;
-}
-.banner .royal-tag span{
+} */
+.royal-tag span{
   font-size: 0.5rem;
 }
 .royal-tag .tag-line {
@@ -238,7 +239,7 @@ header .container {
   width: 40%;
 }
 .img-col{
-  margin: auto;
+  margin: 0;
 }
 .image-text{
   margin: auto;
@@ -253,19 +254,38 @@ header .container {
 }
 .about .side-text h1{
   font-size: 2rem;
-  margin-top: -15rem;
-  right: -14%;
+  margin-top: -8rem;
+  right: -22%;
 }
 .card-text {
   height: auto;
-  margin: 3rem 0rem 0 -5rem;
+  margin: 3rem 0rem 0 -3rem;
   padding: 1rem 1rem 1rem 2rem;
 }
 .card-text h3{
-  font-size: 0.9rem;
+  font-size: 0.7rem;
 }
 .card-text p{
-  font-size: 0.5rem;
+  font-size: 0.4rem;
   margin: auto;
+}
+#bannerOne-caption{
+  width: auto;
+  top: 20%;
+  left: 15%;
+  text-align: left;
+}
+.banner .carousel-caption{
+  top: 30%;
+}
+.about .row{
+  margin: 0;
+}
+.about{
+  padding: 4rem 0;
+}
+.about .royal-tag {
+  display: none;
+  margin-top: 3rem;
 }
 }
