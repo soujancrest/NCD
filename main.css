@@ -311,7 +311,7 @@ header .container {
 .about .side-text h1{
   font-size: 2rem;
   margin-top: -9rem;
-  right: -22%;
+  right: -23%;
 }
 .about .card-text {
   height: auto;
@@ -345,10 +345,10 @@ header .container {
   margin-top: 3rem;
 }
 .overview{
-  padding: 4rem 0 5rem 3rem;
+  padding: 7rem 0 5rem 3rem;
 }
 .overview .img-col {
-  margin: -4rem auto auto -8rem;
+  margin: -4rem auto auto -13rem;
 }
 .overview .img-col img{
   width: 100%;
@@ -358,8 +358,9 @@ header .container {
 }
 .overview .image-text h1{
   font-size: 1rem;
-  margin-left: 6rem;
-  padding: 1rem 0;
+  margin-top: -11rem;
+  /* margin-left: 6rem; */
+  /* padding: 1rem 0; */
 }
 .overview .card-text{
   padding: 1rem;
