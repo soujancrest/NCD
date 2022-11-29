@@ -257,7 +257,7 @@ header .navbar a {
   display: none !important;
 }
 header .logo img {
-  width: 20vw;
+  width: 17vw;
 }
 header .container .logo {
   margin-bottom: auto;
@@ -270,7 +270,7 @@ header .container {
 }
 .banner .carousel-inner img{
   width: auto !important;
-  height: 40vh;
+  height: 35vh;
   filter: brightness(0.8);
 }
 .banner .carousel-caption h1{
@@ -278,11 +278,11 @@ header .container {
 }
 #bannerOne-caption img {
   height: auto;
-  width: 30% !important;
+  width: 25% !important;
   filter: none;
 }
 .banner .royal-tag {
-  top: 44vh;
+  top: 38vh;
 }
 /* .royal-tag{
   left: auto;
@@ -311,7 +311,7 @@ header .container {
 .about .side-text h1{
   font-size: 2rem;
   margin-top: -9rem;
-  right: -25%;
+  right: -22%;
 }
 .about .card-text {
   height: auto;
@@ -377,6 +377,6 @@ header .container {
 .overview .side-text h1 {
   font-size: 2rem;
   margin-top: -8rem;
-  right: -17%;
+  right: -14%;
 }
 }
