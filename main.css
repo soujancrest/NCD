@@ -622,11 +622,12 @@ footer li,
   }
   .about .image-text .bg {
     height: 10vh;
-    width: 49%;
+    width: 55%;
   }
   .about .image-text h1 {
     font-size: 1rem;
     margin: -3rem 0 0 -2rem;
+    padding-top: 0.5rem;
   }
   .about .side-text h1 {
     font-size: 2rem;
@@ -663,6 +664,14 @@ footer li,
   .about .royal-tag {
     display: none;
     margin-top: 3rem;
+  }
+  .logo-in-text-div {
+    margin-top: -4rem;
+    margin-right: 0rem;
+  }
+  .logo-in-text span {
+    font-size: 1.5rem;
+    margin-right: 5rem;
   }
   .overview {
     padding: 7rem 0 5rem 3rem;
@@ -701,6 +710,9 @@ footer li,
     margin-top: -8rem;
     right: -14%;
   }
+  .overview .royal-tag {
+    margin-top: -4rem;
+  }
   .smart-living {
     padding: 1rem 0 0 0;
   }
@@ -721,6 +733,10 @@ footer li,
     right: -20%;
     margin-top: -16rem;
   }
+  .master-plan .royal-tag {
+    margin-top: -5rem;
+    left: -1%;
+  }
   .floor-plan .side-text h1 {
     right: -18.5%;
     margin-top: -9rem;
@@ -738,6 +754,9 @@ footer li,
   .club-royal .image img {
     margin: 1rem 0 -4rem 0;
   }
+  .ch-amenities {
+    padding: 5rem 0 2rem 0;
+  }
   .ch-amenities .heading p {
     text-align: center;
     margin: 1rem 0 0 0;
@@ -745,15 +764,25 @@ footer li,
   .ch-amenities-image {
     margin-top: 2rem !important;
   }
+  .ch-amenities-text {
+    margin-top: 1rem !important;
+  }
+  .ch-amenities-text h1 {
+    font-size: 1rem;
+  }
   .ch-amenities-text p {
     width: auto;
     margin-left: auto;
+    font-size: 0.8rem;
   }
   .left-text {
     text-align: left;
   }
+  .mob-reverse {
+    flex-direction: column-reverse;
+  }
   .location {
-    padding: 5rem 0 6rem 0;
+    padding: 2rem 0 6rem 0;
   }
   .smart-living .text p,
   .location .text p {
@@ -796,11 +825,11 @@ footer li,
   .address img,
   .email img,
   .phone img {
-    width: 50%;
+    width: 35%;
   }
   .completed-projects .side-text h1 {
-    right: -44.5%;
+    right: -41.5%;
     margin-top: -142rem;
-    font-size: 1.99rem;
+    font-size: 1.9rem;
   }
 }
