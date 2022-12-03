@@ -10,7 +10,9 @@
 body {
   overflow-x: hidden;
 }
-
+.row {
+  margin: 0 !important;
+}
 /* fonts */
 @font-face {
   font-family: "Malayalam-regular";
@@ -19,6 +21,14 @@ body {
 @font-face {
   font-family: "Malayalam-bold";
   src: url(/assets/MalayalamMN-Bold-02.ttf);
+}
+@font-face {
+  font-family: "Net-Athelas";
+  src: url(/assets/FontsFree-Net-Athelas2.ttf);
+}
+@font-face {
+  font-family: "Aceh-ExtraBold";
+  src: url(/assets/Aceh-ExtraBold.ttf);
 }
 
 a {
@@ -116,15 +126,33 @@ header .navbar a {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  opacity: 0.3;
-  width: 65%;
+  opacity: 0.25;
+  width: 70%;
 }
 
+.logo-in-text h1 {
+  font-family: "Net-Athelas";
+  font-weight: bold;
+  margin-top: -1rem !important;
+  margin-right: auto !important;
+}
+.logo-in-text span {
+  font-family: "Aceh-ExtraBold";
+  font-size: 2.3rem;
+}
+.logo-in-text-div {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-top: -9rem;
+  margin-right: 10rem;
+  color: #cc9d58;
+  font-weight: bold;
+}
 .image-text h1 {
   font-size: 2.5rem;
   text-align: center;
-  margin-top: -7rem;
-  margin-right: 8rem;
+  margin-top: -9rem;
+  margin-right: 10rem;
   color: #cc9d58;
   font-weight: bold;
 }
@@ -163,6 +191,7 @@ header .navbar a {
   transform: rotate(270deg);
   position: absolute;
   left: 2%;
+  color: #6e2d48;
 }
 
 .banner .royal-tag {
@@ -235,19 +264,22 @@ header .navbar a {
 .overview .image-text h1 {
   margin-top: auto;
   margin-right: auto;
+  letter-spacing: 2px;
 }
 .overview .side-text h1 {
-  right: -8%;
+  right: -8.5%;
 }
 .smart-living {
   padding: 4rem 0;
 }
-.smart-living .text h1 {
+.smart-living .text h1,
+.location .text h1 {
   color: #cc9d58;
   text-align: center;
   font-size: 3.7rem;
   font-weight: bold;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
+  font-family: "Malayalam-bold";
 }
 .smart-living .text h3 {
   font-size: 2.5rem;
@@ -256,13 +288,14 @@ header .navbar a {
   font-weight: bold;
   letter-spacing: 2px;
 }
-.smart-living .text p {
-  font-size: 1rem;
+.smart-living .text p,
+.location .text p {
+  font-size: 1.1rem;
   text-align: center;
   color: #cc9d58;
-  font-weight: bold;
+  /* font-weight: bold; */
 }
-.smart-living .container .text .bg{
+.smart-living .container .text .bg {
   position: relative;
 }
 .smart-living .container .text .bg::before {
@@ -278,48 +311,254 @@ header .navbar a {
   width: 100%;
   height: 100%;
 }
-.smart-living .container .text .bg-text{
+.smart-living .container .text .bg-text {
   position: relative;
   margin: 2rem 0 0 0;
   padding: 2rem 0;
 }
-.master-plan{
+.master-plan {
   padding: 6rem 0 4rem 0;
 }
-.club-royal{
+.master-plan-logo {
+  text-align: center;
+}
+.master-plan-image h5 {
+  text-align: center;
+  margin-bottom: 0;
+  font-weight: bold;
+}
+.master-plan-logo img {
+  width: 30%;
+}
+.master-plan-text h6 {
+  font-size: 0.8rem;
+}
+.master-plan-text p {
+  font-size: 0.7rem;
+  margin-bottom: 0;
+}
+.master-plan .royal-tag {
+  margin-top: -7rem;
+}
+.master-plan .side-text h1 {
+  right: -12%;
+  margin-top: -25rem;
+}
+.floor-plan {
+  padding: 5rem 0;
+}
+.floor-plan .royal-tag {
+  margin-top: -7rem;
+}
+.floor-plan .side-text h1 {
+  right: -10.5%;
+  margin-top: -25rem;
+}
+.floor-plan-image {
+  text-align: center;
+}
+.club-royal {
   padding: 6rem 0 0 0;
   background-color: #6e2d48;
 }
-.club-royal .text h1{
+.club-royal .text h1 {
   font-size: 4rem;
-    text-align: center;
-    padding: 0 2rem;
-    color: #CC9D58;
+  text-align: center;
+  padding: 0 2rem;
+  color: #cc9d58;
 }
-.club-royal .image{
+.club-royal .image {
   text-align: center;
 }
-.club-royal .image img{
+.club-royal .image img {
   width: 60%;
-    margin: 3rem 0 -8rem 0;
+  margin: 3rem 0 -8rem 0;
 }
-.amenities-text p{
-  margin: 8rem 0 0 0;
-  color: #CC9D58;
-  font-weight: bold;
+.club-royal .side-text h1 {
+  right: -11%;
 }
-.club-royal .side-text h1{
-  right: -10%;
+.club-royal .royal-tag {
+  color: #ffffff;
+  margin-top: -8rem;
 }
-.master-plan-image{
+.master-plan-image {
   margin: 0 4rem;
   padding: 4rem;
-    box-shadow: 0px 8px 20px 0px;
+  box-shadow: 0px 0px 20px 0px gray;
 }
-.floor-plan img{
+.floor-plan img {
   width: 50%;
 }
+.ch-amenities {
+  padding: 5rem 0;
+}
+.ch-amenities .heading p {
+  color: #cc9d58;
+  font-weight: bold;
+  margin: 2rem 0 7rem 0;
+}
+.ch-amenities-image {
+  margin-top: 5rem !important;
+}
+.ch-amenities-text {
+  align-self: flex-end;
+}
+.ch-amenities-text h1 {
+  color: #cc9d58;
+  font-weight: bold;
+}
+.ch-amenities-text p {
+  margin: 0;
+  width: 65%;
+  font-size: 0.9rem;
+}
+.left-text {
+  text-align: right;
+}
+.left-text p {
+  margin-left: 13rem;
+  width: auto !important;
+}
+.location {
+  padding: 5rem 0 14rem 0;
+}
+.location .side-text h1 {
+  right: -9%;
+}
+.location-image {
+  text-align: center;
+}
+.location-image img {
+  width: 60%;
+  box-shadow: 0px 0px 20px 0px grey;
+}
+/* specifications tabs */
+.specifications {
+  padding: 5rem 0 8rem 0;
+}
+.collapsible-col {
+  border-left: solid 2px gray;
+  border-right: solid 2px gray;
+  border-top: solid 2px gray;
+}
+.collapsible {
+  color: #cc9d58;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: gray;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  background-color: #ffffff;
+  font-weight: bold;
+}
 
+.specifications .active,
+.collapsible:hover {
+  /* background-color: #6e2d48; */
+  border-bottom: none;
+}
+
+.collapsible:after {
+  content: "\002B";
+  color: #cc9d58;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.content {
+  /* padding: 0 18px; */
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  border-top: solid 2px gray;
+  /* border-left: solid 2px gray; */
+  /* border-right: solid 2px gray; */
+}
+.specifications button:first-child {
+  border-bottom: none;
+}
+.specifications button:last-child {
+  border-top: none;
+}
+.specifications .content p {
+  font-size: 0.9rem;
+  padding: 10px 18px;
+  margin-bottom: 2px;
+  /* border-left: solid 2px gray; */
+  /* border-right: solid 2px gray; */
+  border-bottom: solid 2px gray;
+}
+.specifications .side-text h1 {
+  right: -15%;
+  margin-top: -17rem;
+}
+.completed-projects {
+  padding: 7rem 0;
+  text-align: center;
+  background-color: #fffced;
+}
+.completed-projects img {
+  margin-bottom: 1rem;
+  padding: 0 2rem;
+}
+.completed-projects .side-text h1 {
+  right: -22.5%;
+  margin-top: -20rem;
+}
+.project-logo {
+  height: 6rem;
+  width: auto;
+}
+.project-col {
+  background-color: #ffffff;
+  padding: 2rem 0;
+}
+.completed-projects .royal-tag {
+  margin-top: -4rem;
+}
+footer {
+  background-color: #6e2d48;
+  padding: 4rem 0 5rem 0;
+}
+footer .logo img {
+  width: 30%;
+}
+footer ul {
+  list-style: none;
+  margin: 0;
+}
+.address,
+.email,
+.phone {
+  display: flex;
+}
+.address img,
+.email img,
+.phone img {
+  width: 70%;
+}
+footer span {
+  font-size: 0.9rem;
+  color: #ffffff;
+}
+.address-text,
+.email-address,
+.phone-number {
+  align-self: center;
+}
+footer li,
+.address,
+.email,
+.phone {
+  margin-bottom: 1rem !important;
+}
 @media screen and (min-width: 1920px) {
 }
 @media screen and (min-width: 1022px) and (max-width: 1500px) {
@@ -336,6 +575,9 @@ header .navbar a {
   header .logo img {
     width: 17vw;
   }
+  .side-text h1 {
+    font-size: 2rem;
+  }
   header .container .logo {
     margin-bottom: auto;
   }
@@ -344,6 +586,7 @@ header .navbar a {
   }
   .banner {
     height: auto;
+    background-color: #ffffff;
   }
   .banner .carousel-inner img {
     width: auto !important;
@@ -361,9 +604,9 @@ header .navbar a {
   .banner .royal-tag {
     top: 38vh;
   }
-  /* .royal-tag{
-  left: auto;
-} */
+  .royal-tag {
+    left: -2%;
+  }
   .royal-tag span {
     font-size: 0.5rem;
   }
@@ -425,7 +668,7 @@ header .navbar a {
     padding: 7rem 0 5rem 3rem;
   }
   .overview .img-col {
-    margin: -4rem auto auto -15rem;
+    margin: -4rem auto auto -13rem;
   }
   .overview .img-col img {
     width: 100%;
@@ -435,7 +678,8 @@ header .navbar a {
   }
   .overview .image-text h1 {
     font-size: 1rem;
-    margin-top: -12rem;
+    margin-top: -11rem;
+    letter-spacing: 1px;
     /* margin-left: 6rem; */
     /* padding: 1rem 0; */
   }
@@ -460,12 +704,103 @@ header .navbar a {
   .smart-living {
     padding: 1rem 0 0 0;
   }
-  .smart-living .text h1 {
-    font-size: 2.5rem;
+  .smart-living .text h1,
+  .location .text h1 {
+    font-size: 2rem;
   }
   .smart-living .text h3 {
     font-size: 1.8rem;
     padding: 0rem;
     letter-spacing: 1px;
+  }
+  .master-plan-image {
+    margin: auto;
+    padding: 2rem;
+  }
+  .master-plan .side-text h1 {
+    right: -20%;
+    margin-top: -16rem;
+  }
+  .floor-plan .side-text h1 {
+    right: -18.5%;
+    margin-top: -9rem;
+  }
+  .club-royal {
+    padding: 2rem 0 0 0;
+  }
+  .club-royal .text h1 {
+    font-size: 1.5rem;
+  }
+  .club-royal .side-text h1 {
+    right: -19%;
+    margin-top: -9rem;
+  }
+  .club-royal .image img {
+    margin: 1rem 0 -4rem 0;
+  }
+  .ch-amenities .heading p {
+    text-align: center;
+    margin: 1rem 0 0 0;
+  }
+  .ch-amenities-image {
+    margin-top: 2rem !important;
+  }
+  .ch-amenities-text p {
+    width: auto;
+    margin-left: auto;
+  }
+  .left-text {
+    text-align: left;
+  }
+  .location {
+    padding: 5rem 0 6rem 0;
+  }
+  .smart-living .text p,
+  .location .text p {
+    font-size: 0.7rem;
+  }
+  .location .side-text h1 {
+    right: -17%;
+    margin-top: -7rem;
+  }
+  .specifications {
+    padding: 2rem 2rem 6rem 1rem;
+  }
+  #collapsible-col-2 {
+    border-top: none;
+  }
+  .specifications .side-text h1 {
+    right: -29%;
+    margin-top: -40rem;
+  }
+  footer .quick-links {
+    display: none;
+  }
+  footer .logo img {
+    width: 50%;
+  }
+  .address-image,
+  .address-text,
+  .email-image,
+  .email-address,
+  .phone-image,
+  .phone-num {
+    padding: 0 !important;
+  }
+  .contact {
+    margin-top: 2rem;
+  }
+  .contact ul {
+    padding-left: 0 !important;
+  }
+  .address img,
+  .email img,
+  .phone img {
+    width: 50%;
+  }
+  .completed-projects .side-text h1 {
+    right: -44.5%;
+    margin-top: -142rem;
+    font-size: 1.99rem;
   }
 }
