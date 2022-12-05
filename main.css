@@ -357,6 +357,28 @@ header .navbar a {
 .floor-plan-image {
   text-align: center;
 }
+.floor-plan .active:after {
+  content: none;
+}
+.floor-plan .nav-pills .nav-link {
+  transform: rotate(270deg);
+  padding: 1rem;
+  margin: 4rem 0rem;
+  width: 100%;
+  font-weight: bold;
+  color: #adadad;
+  font-size: 1.25rem;
+}
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  color: #6e2d48 !important;
+  background-color: #ffffff !important;
+}
+#v-pills-tab {
+  margin-right: -16rem !important;
+  margin-left: 5rem;
+  margin-top: 4rem;
+}
 .club-royal {
   padding: 6rem 0 0 0;
   background-color: #6e2d48;

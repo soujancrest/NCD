@@ -28,6 +28,41 @@
       integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
       crossorigin="anonymous"
     ></script>
+    <!-- flickity -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flickity@2/dist/flickity.min.css"
+    />
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <!-- fancybox -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    <style>
+      .slideshow1 img {
+        position: absolute;
+        left: 0;
+        margin-left: 0%;
+        width: 23vw;
+        margin: 1%;
+        height: 40vh;
+      }
+
+      .flickity-prev-next-button .flickity-button-icon {
+        position: absolute;
+        left: 36% !important;
+        top: 35% !important;
+        width: 30% !important;
+        height: 30% !important;
+      }
+    </style>
+    <style id="fancybox-style-noscroll" type="text/css">
+      .compensate-for-scrollbar {
+        margin-right: 17px;
+      }
+    </style>
   </head>
   <body>
     <main>
@@ -272,7 +307,14 @@
               </div>
               <div class="col-lg-2"></div>
             </div>
-            <img src="/assets/MasterPlan.jpg" id="master-plan-image" alt="" />
+            <a href="/assets/MasterPlan.jpg" data-fancybox="gallery">
+              <img
+                src="/assets/MasterPlan.jpg"
+                id="master-plan-image"
+                alt=""
+                class="img-fluid"
+              />
+            </a>
           </div>
 
           <div class="royal-tag">
@@ -287,7 +329,99 @@
       <div class="floor-plan">
         <div class="container">
           <div class="floor-plan-image">
-            <img src="/assets/Floor_PlanA.jpg" alt="" />
+            <div class="d-flex align-items-start">
+              <div
+                class="nav flex-column nav-pills me-3"
+                id="v-pills-tab"
+                role="tablist"
+                aria-orientation="vertical"
+              >
+                <button
+                  class="nav-link active"
+                  id="v-pills-home-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#v-pills-home"
+                  type="button"
+                  role="tab"
+                  aria-controls="v-pills-home"
+                  aria-selected="true"
+                >
+                  BLOCK A
+                </button>
+                <button
+                  class="nav-link"
+                  id="v-pills-profile-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#v-pills-profile"
+                  type="button"
+                  role="tab"
+                  aria-controls="v-pills-profile"
+                  aria-selected="false"
+                >
+                  BLOCK B
+                </button>
+
+                <button
+                  class="nav-link"
+                  id="v-pills-messages-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#v-pills-messages"
+                  type="button"
+                  role="tab"
+                  aria-controls="v-pills-messages"
+                  aria-selected="false"
+                >
+                  BLOCK C
+                </button>
+              </div>
+              <div class="tab-content" id="v-pills-tabContent">
+                <div
+                  class="tab-pane fade show active"
+                  id="v-pills-home"
+                  role="tabpanel"
+                  aria-labelledby="v-pills-home-tab"
+                  tabindex="0"
+                >
+                  <a href="/assets/Floor_PlanA.jpg" data-fancybox="gallery">
+                    <img
+                      src="/assets/Floor_PlanA.jpg"
+                      alt=""
+                      class="img-fluid"
+                    />
+                  </a>
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="v-pills-profile"
+                  role="tabpanel"
+                  aria-labelledby="v-pills-profile-tab"
+                  tabindex="0"
+                >
+                  <a href="/assets/Floor_PlanB.jpg" data-fancybox="gallery">
+                    <img
+                      src="/assets/Floor_PlanB.jpg"
+                      alt=""
+                      class="img-fluid"
+                    />
+                  </a>
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="v-pills-messages"
+                  role="tabpanel"
+                  aria-labelledby="v-pills-messages-tab"
+                  tabindex="0"
+                >
+                  <a href="/assets/Floor_PlanC.jpg" data-fancybox="gallery">
+                    <img
+                      src="/assets/Floor_PlanC.jpg"
+                      alt=""
+                      class="img-fluid"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="royal-tag">
             <div class="tag-line"></div>
@@ -853,6 +987,57 @@
         </div>
       </footer>
     </main>
+    <script>
+      "use strict";
+
+      let tickerSpeed = 2;
+      let flickity = null;
+      let isPaused = false;
+      const slideshow1El = document.querySelector(".js-slideshow1");
+
+      const update = () => {
+        if (isPaused) return;
+
+        if (flickity.slides) {
+          flickity.x = (flickity.x - tickerSpeed) % flickity.slideableWidth;
+          flickity.selectedIndex = flickity.dragEndRestingSelect();
+          flickity.updateSelectedSlide();
+          flickity.settle(flickity.x);
+        }
+
+        window.requestAnimationFrame(update);
+      };
+
+      const pause = () => {
+        isPaused = true;
+      };
+
+      const play = () => {
+        if (isPaused) {
+          isPaused = false;
+          window.requestAnimationFrame(update);
+        }
+      };
+
+      flickity = new Flickity(slideshow1El, {
+        autoPlay: false,
+        prevNextButtons: true,
+        pageDots: false,
+        draggable: true,
+        wrapAround: true,
+        selectedAttraction: 0.015,
+        friction: 0.25,
+      });
+      flickity.x = 0;
+      slideshow1El.addEventListener("mouseenter", pause, false);
+      slideshow1El.addEventListener("focusin", pause, false);
+      slideshow1El.addEventListener("mouseleave", play, false);
+      slideshow1El.addEventListener("focusout", play, false);
+      flickity.on("dragStart", () => {
+        isPaused = true;
+      });
+      update();
+    </script>
     <script>
       var coll = document.getElementsByClassName("collapsible");
       var i;
