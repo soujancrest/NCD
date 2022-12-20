@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Royal Pavilion</title>
     <link rel="stylesheet" href="/main.css" alt="text/scss" />
+    <script src="/main.js"></script>
     <!-- Bootstrap -->
     <!-- CSS only -->
     <link
@@ -28,6 +29,12 @@
       integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
       crossorigin="anonymous"
     ></script>
+    <!-- owlcarousel -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./assets/owl.carousel.min.css"
+    />
     <!-- flickity -->
     <link
       rel="stylesheet"
@@ -37,9 +44,14 @@
     <!-- fancybox -->
     <link
       rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+    <!-- <link
+      rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"
     />
-    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script> -->
     <style>
       .slideshow1 img {
         position: absolute;
@@ -63,6 +75,22 @@
         margin-right: 17px;
       }
     </style>
+    <!-- Splide js -->
+    <link
+      rel="stylesheet"
+      href="/assets/splide-4.1.3/dist/css/splide.min.css"
+    />
+    <script src="/assets/splide-4.1.3/dist/js/splide.min.js"></script>
+    <script>
+      // new Splide(".splide").mount();
+      var splide = new Splide(".splide", {
+        direction: "ttb",
+        height: "10rem",
+        wheel: true,
+      });
+
+      splide.mount();
+    </script>
   </head>
   <body>
     <main>
@@ -255,7 +283,168 @@
             </div>
           </div>
           <div class="scroll-carousel">
-            <div class="slide-one"></div>
+            <div class="highlightSlides speed3 animated fadeInUp">
+              <div class="fp-slides">
+                <div
+                  class="fp-slidesContainer"
+                  style="
+                    width: 600%;
+                    transition: all 1000ms ease 0s;
+                    transform: translate3d(0px, 0px, 0px);
+                  "
+                >
+                  <div
+                    class="slide fp-slide fp-table active"
+                    style="width: 16.6667%"
+                  >
+                    <div class="fp-tableCell" style="height: 764px">
+                      <div class="highlightImg" style="background: none">
+                        <img
+                          src="images/highlights1.png?v=4"
+                          width="100%"
+                          class="fadeInUp"
+                        />
+                      </div>
+                      <h4
+                        data-txt="<span>2/3/4</span><br>BHK"
+                        class="animated2 speed2 fadeInUp"
+                      >
+                        <span class="hideMe">2/3/4 BHK</span>LifeDesigned<sup
+                          >®</sup
+                        ><br />
+                        Homes
+                      </h4>
+                    </div>
+                  </div>
+                  <div class="slide fp-slide fp-table" style="width: 16.6667%">
+                    <div class="fp-tableCell" style="height: 764px">
+                      <div
+                        class="highlightImg"
+                        style="
+                          background: url('images/highlight-pin.png') center
+                            center no-repeat;
+                        "
+                      >
+                        <img
+                          src="images/14acres.png?v=4"
+                          width="100%"
+                          class="fadeInUp"
+                        />
+                      </div>
+                      <h4
+                        data-txt="<span>14</span><br>Acres"
+                        class="animated2 speed2"
+                      >
+                        <span class="hideMe">14 Acres</span>of Integrated<br />
+                        Development
+                      </h4>
+                    </div>
+                  </div>
+                  <div class="slide fp-slide fp-table" style="width: 16.6667%">
+                    <div class="fp-tableCell" style="height: 764px">
+                      <div
+                        class="highlightImg"
+                        style="
+                          background: url('images/highlight-pin.png') center
+                            center no-repeat;
+                        "
+                      >
+                        <img
+                          src="images/highlights3.png?v=4"
+                          width="100%"
+                          class="fadeInUp"
+                        />
+                      </div>
+                      <h4
+                        data-txt="<span>Nature</span><br>View"
+                        class="animated2 speed2"
+                      >
+                        <span class="hideMe">Nature View</span>With
+                        Greenscape<br />
+                        Residences
+                      </h4>
+                    </div>
+                  </div>
+                  <div class="slide fp-slide fp-table" style="width: 16.6667%">
+                    <div class="fp-tableCell" style="height: 764px">
+                      <div
+                        class="highlightImg"
+                        style="
+                          background: url('images/highlight-pin.png') center
+                            center no-repeat;
+                        "
+                      >
+                        <img
+                          src="images/highlights4.png?v=4"
+                          width="100%"
+                          class="fadeInUp"
+                        />
+                      </div>
+                      <h4
+                        data-txt="<span>Ocean</span><br>View"
+                        class="animated2 speed2"
+                      >
+                        <span class="hideMe">Ocean View</span>With Seascape<br />
+                        Vistas
+                      </h4>
+                    </div>
+                  </div>
+                  <div class="slide fp-slide fp-table" style="width: 16.6667%">
+                    <div class="fp-tableCell" style="height: 764px">
+                      <div
+                        class="highlightImg"
+                        style="
+                          background: url('images/highlight-pin.png') center
+                            center no-repeat;
+                        "
+                      >
+                        <img
+                          src="images/highlights5.png?v=4"
+                          width="100%"
+                          class="fadeInUp"
+                        />
+                      </div>
+                      <h4
+                        data-txt="<span>Skyline</span><br>drama"
+                        class="animated2 speed2"
+                      >
+                        <span class="hideMe">Skyline Drama</span>With
+                        Cityscape<br />
+                        Homes
+                      </h4>
+                    </div>
+                  </div>
+                  <div class="slide fp-slide fp-table" style="width: 16.6667%">
+                    <div class="fp-tableCell" style="height: 764px">
+                      <div
+                        class="highlightImg"
+                        style="
+                          background: url('images/highlight-pin.png') center
+                            center no-repeat;
+                        "
+                      >
+                        <img
+                          src="images/highlights6.png?v=4"
+                          width="100%"
+                          class="fadeInUp"
+                        />
+                      </div>
+                      <h4
+                        data-txt="<span>3</span><br>Clubhouses"
+                        class="animated2 speed2"
+                      >
+                        <span class="hideMe">3 Clubhouses</span>for holistic<br />
+                        living
+                      </h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="fp-controlArrow fp-prev" style="display: none"></div>
+              <div class="fp-controlArrow fp-next" style="display: block"></div>
+
+              <div class="clear"></div>
+            </div>
           </div>
           <div class="royal-tag">
             <div class="tag-line"></div>
@@ -429,6 +618,195 @@
           </div>
           <div class="side-text">
             <h1>FLOOR PLAN</h1>
+          </div>
+        </div>
+      </div>
+      <div class="isometric">
+        <div class="container">
+          <div class="row">
+            <div class="col-4">
+              <div class="slider">
+                <div class="isometric-image">
+                  <a
+                    href="/assets/isometric-view/2BHK 1,330 Sft. - EAST FACING.png"
+                    data-fancybox="gallery"
+                  >
+                    <img
+                      src="/assets/isometric-view/2BHK 1,330 Sft. - EAST FACING.png"
+                      alt=""
+                      class="img-fluid"
+                    />
+                  </a>
+                </div>
+                <div class="isometric-text">
+                  <p>2BHK 1,330 Sft. - EAST FACING</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="slider">
+                <div class="isometric-image">
+                  <a
+                    href="/assets/isometric-view/2BHK 1,330 Sft. - WEST FACING.png"
+                    data-fancybox="gallery"
+                  >
+                    <img
+                      src="/assets/isometric-view/2BHK 1,330 Sft. - WEST FACING.png"
+                      alt=""
+                      class="img-fluid"
+                    />
+                  </a>
+                </div>
+                <div class="isometric-text">
+                  <p>2BHK 1,330 Sft. - WEST FACING</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="slider">
+                <div class="isometric-image">
+                  <a
+                    href="/assets/isometric-view/3BHK 1,765 Sft. - EAST FACING.png"
+                    data-fancybox="gallery"
+                  >
+                    <img
+                      src="/assets/isometric-view/3BHK 1,765 Sft. - EAST FACING.png"
+                      alt=""
+                      class="img-fluid"
+                    />
+                  </a>
+                </div>
+                <div class="isometric-text">
+                  <p>3BHK 1,765 Sft. - EAST FACING</p>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="col-4">
+              <div class="slider">
+                <div class="isometric-image">
+                  <a href="/assets/isometric-view/3BHK 1,765 Sft. - WEST FACING.png" data-fancybox="gallery">
+
+                    <img src="/assets/isometric-view/3BHK 1,765 Sft. - WEST FACING.png" alt="" class="img-fluid"/>
+                  </a>
+                </div>
+                <div class="isometric-text">
+                  <p>3BHK 1,765 Sft. - WEST FACING</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="slider">
+                <div class="isometric-image">
+                  <a href="/assets/isometric-view/3BHK 2,150 Sft. - NORTH FACING.png" data-fancybox="gallery">
+
+                    <img src="/assets/isometric-view/3BHK 2,150 Sft. - NORTH FACING.png" alt="" class="img-fluid"/>
+                  </a>
+                </div>
+                <div class="isometric-text">
+                  <p>3BHK 2,150 Sft. - NORTH FACING</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="slider">
+                <div class="isometric-image">
+                  <a href="/assets/isometric-view/3BHK 2,400 Sft. - EAST FACING.png" data-fancybox="gallery">
+
+                    <img src="/assets/isometric-view/3BHK 2,400 Sft. - EAST FACING.png" alt="" class="img-fluid"/>
+                  </a>
+                </div>
+                <div class="isometric-text">
+                  <p>3BHK 2,400 Sft. - EAST FACING</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="slider">
+                <div class="isometric-image">
+                  <a href="/assets/isometric-view/3BHK 2,400 Sft. - WEST FACING.png" data-fancybox="gallery">
+
+                    <img src="/assets/isometric-view/3BHK 2,400 Sft. - WEST FACING.png" alt="" class="img-fluid"/>
+                  </a>
+                </div>
+                <div class="isometric-text">
+                  <p>3BHK 2,400 Sft. - WEST FACING</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="slider">
+                <div class="isometric-image">
+                  <a href="/assets/isometric-view/3BHK 3,135 Sft. - WEST FACING.png" data-fancybox="gallery">
+
+                    <img src="/assets/isometric-view/3BHK 3,135 Sft. - WEST FACING.png" alt="" class="img-fluid"/>
+                  </a>
+                </div>
+                <div class="isometric-text">
+                  <p>3BHK 3,135 Sft. - WEST FACING</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="slider">
+                <div class="isometric-image">
+                  <a href="/assets/isometric-view/3BHK 3,135 Sft.- EAST FACING.png" data-fancybox="gallery">
+
+                    <img src="/assets/isometric-view/3BHK 3,135 Sft.- EAST FACING.png" alt="" class="img-fluid"/>
+                  </a>
+                </div>
+                <div class="isometric-text">
+                  <p>3BHK 3,135 Sft.- EAST FACING</p>
+                </div>
+              </div>
+            </div> -->
+          </div>
+          <div class="royal-tag">
+            <div class="tag-line"></div>
+            <span>ROYAL PAVILION</span>
+          </div>
+          <div class="side-text">
+            <h1>ISOMETRIC VIEWS</h1>
+          </div>
+        </div>
+      </div>
+      <div class="elevation">
+        <div class="slider">
+          <div class="owl-carousel">
+            <div class="slider-card">
+              <div
+                class="d-flex justify-content-center align-items-center mb-4"
+              >
+                <a href="#"> <img src="/assets/overview.jpg" alt="" /></a>
+              </div>
+            </div>
+            <div class="slider-card">
+              <div
+                class="d-flex justify-content-center align-items-center mb-4"
+              >
+                <a href="#"> <img src="/assets/overview.jpg" alt="" /></a>
+              </div>
+            </div>
+            <div class="slider-card">
+              <div
+                class="d-flex justify-content-center align-items-center mb-4"
+              >
+                <a href="#"><img src="/assets/overview.jpg" alt="" /></a>
+              </div>
+            </div>
+            <div class="slider-card">
+              <div
+                class="d-flex justify-content-center align-items-center mb-4"
+              >
+                <img src="/assets/overview.jpg" alt="" />
+              </div>
+            </div>
+            <div class="slider-card">
+              <div
+                class="d-flex justify-content-center align-items-center mb-4"
+              >
+                <a href="#"> <img src="/assets/overview.jpg" alt="" /></a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -613,8 +991,8 @@
         </div>
       </div>
       <div class="location">
-        <div class="container">
-          <div class="text">
+        <div class="text">
+          <div class="container">
             <h1>A GLORIOUS LIFE IS WITHIN YOUR REACH</h1>
             <p>
               Enjoy spacious smart homes designed with stellar features that
@@ -624,9 +1002,13 @@
               and better.
             </p>
           </div>
+        </div>
+        <div class="container">
           <div class="proximity"></div>
           <div class="location-image">
-            <img src="/assets/Location Map.jpg" alt="" />
+            <a href="/assets/Location Map.jpg" data-fancybox="gallery">
+              <img src="/assets/Location Map.jpg" alt="" class="img-fluid" />
+            </a>
           </div>
           <div class="royal-tag">
             <div class="tag-line"></div>
@@ -790,12 +1172,63 @@
         </div>
       </div>
       <div class="about-company">
-        <div class="container"></div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-7">
+              <div class="abt-com-bg">
+                <div class="abt-com-image">
+                  <img src="/assets/NCD_Complete_Logo.png" alt="" />
+                </div>
+                <div class="abt-com-text">
+                  <p>
+                    Nikhila Constructions and Developers established in 2005,
+                    has excelled in gated-community and affordable apartment
+                    projects which offer a sustainable balance between
+                    affordability and luxury. With an aspiration to build homes
+                    with global standards and environmental responsibility by
+                    embracing newer technologies and design solutions.
+                    <br /><br />
+                    “At Nikhila Constructions, we are committed to high
+                    integrity, transparency, and quality which makes us the
+                    preferred choice of the intelligent buyers”
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-5">
+              <div class="abt-com-awards v-slider">
+                <div class="slides v_slides" id="v-slides">
+                  <div class="slide">
+                    <div class="inner_content">
+                      <img src="/assets/Award-1.png" alt="" />
+                    </div>
+                  </div>
+
+                  <div class="slide">
+                    <div class="inner_content">
+                      <img src="/assets/Award-2.png" alt="" />
+                    </div>
+                  </div>
+
+                  <div class="slide">
+                    <div class="inner_content">
+                      <img src="/assets/Award-3.png" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="royal-tag">
+            <div class="tag-line"></div>
+            <span>ROYAL PAVILION</span>
+          </div>
+        </div>
       </div>
       <div class="completed-projects">
         <div class="container">
           <div class="row">
-            <div class="col-lg-3 col-12">
+            <div class="col-lg-3 col-6">
               <div class="project-col">
                 <img
                   class="project-logo"
@@ -818,7 +1251,7 @@
                 />
               </div>
             </div>
-            <div class="col-lg-3 col-12">
+            <div class="col-lg-3 col-6">
               <div class="project-col">
                 <img
                   class="project-logo"
@@ -841,8 +1274,8 @@
                 />
               </div>
             </div>
-            <div class="col-lg-3 col-12">
-              <div class="project-col">
+            <div class="col-lg-3 col-6">
+              <div class="project-col pride-col">
                 <img
                   class="project-logo"
                   src="/assets/Project_Images/3Project_Logo.png"
@@ -864,7 +1297,7 @@
                 />
               </div>
             </div>
-            <div class="col-lg-3 col-12">
+            <div class="col-lg-3 col-6">
               <div class="project-col">
                 <img
                   class="project-logo"
@@ -1053,6 +1486,40 @@
           }
         });
       }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script> -->
+    <script src="assets/owl.carousel.min.js"></script>
+    <script>
+      // Owlcarousel
+      $(document).ready(function () {
+        $(".owl-carousel").owlCarousel({
+          loop: true,
+          margin: 10,
+          nav: true,
+          autoplay: false,
+          // autoplayTimeout: 3000,
+          // autoplayHoverPause: true,
+          center: true,
+          mouseDrag: true,
+          navText: [
+            "<i class='fa fa-angle-left'></i>",
+            "<i class='fa fa-angle-right'></i>",
+          ],
+          responsive: {
+            0: {
+              items: 2,
+            },
+            600: {
+              items: 2,
+            },
+            1000: {
+              items: 3,
+            },
+          },
+        });
+      });
     </script>
   </body>
 </html>
